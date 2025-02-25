@@ -1,0 +1,188 @@
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset margins */
+body, h2, p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Full page sections */
+section {
+  height: 90vh; /* Reduced height */
+  width: 90%; /* Reduced width for a centered look */
+  max-width: 1200px; /* Prevents it from getting too wide on large screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  top: 30px;
+  /* Premium Black Polymorphic Background */
+  background: linear-gradient(135deg, #000000, #1a1a1a, #282c34);
+  background-size: 400% 400%;
+  /* animation: morphBackground 10s infinite alternate; */
+  
+  /* Rounded Corners */
+  border-radius: 30px;
+  
+  /* Premium Shadow Effect */
+  box-shadow: 0px 10px 30px rgba(86, 158, 3, 0.5);
+  
+  /* Centering */
+  margin: 5vh auto; /* Adds spacing from the top */
+}
+
+/* Background Morphing Animation */
+/* @keyframes morphBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} */
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 12px 0;
+  text-align: center;
+  z-index: 1000;
+  
+  /* Flexbox for equal spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #32f514;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin: 0 15px; /* Ensures equal spacing */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  
+  /* Premium Button-Like Hover */
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #77ff00;
+  background-color: rgba(50, 245, 20, 0.2);
+  box-shadow: 0 4px 10px rgba(119, 255, 0, 0.5);
+}
+#home
+{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  font-size: 1.5rem;
+}
+#home h3
+{
+  font-size: 1.3rem;
+}
+#home .content
+{
+  margin-left: 15%;
+  justify-items: flex-start;
+  line-height: 15px;
+}
+#home b{
+  color: #77ff00;
+}
+#home button{
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #000000;
+  color: #77ff00;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 5px rgba(119, 255, 0, 0.5);
+}
+#home button:hover{
+  color: #77ff00;
+  background-color: rgba(50, 245, 20, 0.2);
+  box-shadow: 0 4px 10px rgba(119, 255, 0, 0.5);
+}
+#home .image {
+  position: relative;
+  display: inline-block;
+}
+
+#home .image img {
+  filter: drop-shadow(0 4px 5px rgba(119, 255, 0, 0.5));
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  display: block;
+  width: 390px; /* Adjust size as needed */
+  height: 390px; /* Ensure circular shape */
+}
+
+/* Animated Circle Border */
+#home .image::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 400px; /* Slightly larger than the image */
+  height: 400px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top: 3px solid limegreen; /* Change color as needed */
+  border-bottom: 3px solid limegreen;
+  animation: rotateBorder 2s linear infinite;
+}
+
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#about {
+  padding: 20px; /* Maintain spacing */
+  color: white; 
+  font-size: large;
+  font-weight: 600;
+  /* Uncomment background-color if needed */
+  /* background-color: #151920; */
+}
+
+#about p, 
+#about ul {
+  display: flex;
+  align-items: flex-start; /* Align content properly */
+}
+
+#about li{
+  box-shadow: 0 4px 10px rgba(119, 255, 0, 0.5);
+  padding: 10px;
+  margin-top: 10px;
+  height: 100%;
+}
+#about h2,
+#about strong {
+  font-weight: bold;
+  color: #32f514; /* Green color */
+  margin-top: 20px;
+}
+
+#about ul {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
