@@ -37,6 +37,22 @@ section {
   /* Centering */
   margin: 5vh auto; /* Adds spacing from the top */
 }
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  section {
+    min-height: auto; /* Allows content to define height */
+    padding: 30px 15px; /* Adds spacing inside */
+    margin-top: 20px; /* Adjusts spacing from top */
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    min-height: auto; /* Let content expand naturally */
+    padding: 20px 10px;
+    margin-top: 10px;
+  }
+}
 
 /* Background Morphing Animation */
 /* @keyframes morphBackground {
@@ -88,6 +104,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   font-size: 1.5rem;
+  overflow-y: hidden;
 }
 #home h3
 {
@@ -154,35 +171,110 @@ section {
   }
 }
 #about {
-  padding: 20px; /* Maintain spacing */
+  padding: 20px 5%; /* Use percentage for better responsiveness */
   color: white; 
   font-size: large;
   font-weight: 600;
-  /* Uncomment background-color if needed */
-  /* background-color: #151920; */
+  max-width: 1100px; /* Limit width for better readability */
+  margin: 12 auto;
+  height: auto;
 }
 
-#about p, 
-#about ul {
-  display: flex;
-  align-items: flex-start; /* Align content properly */
-}
-
-#about li{
-  box-shadow: 0 4px 10px rgba(119, 255, 0, 0.5);
-  padding: 10px;
-  margin-top: 10px;
-  height: 100%;
-}
-#about h2,
-#about strong {
+#about h2, #about strong {
   font-weight: bold;
   color: #32f514; /* Green color */
-  margin-top: 20px;
+}
+
+#about p {
+  line-height: 1.6;
+  text-align: justify;
 }
 
 #about ul {
   list-style: none;
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 15px;
+}
+
+#about li {
+  box-shadow: 0 4px 10px rgba(119, 255, 0, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1 1 calc(50% - 20px); /* Two items per row on medium screens */
+  min-width: 280px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #about ul {
+    flex-direction: row; /* Stack items on smaller screens */
+    align-items: center;
+    min-height: fit-content;
+  }
+
+  #about li {
+    flex: 1 1 100%; /* Full width for smaller screens */
+    text-align: left;
+  }
+
+  #about {
+    font-size: medium; /* Reduce font size for small screens */
+  }
+}
+#skills {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin: 10px auto;
+  padding: 2px;
+}
+
+#skills h3 {
+  color: #32f514;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.skills-category {
+  margin-top: 20px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.skill-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+  background: rgba(50, 245, 20, 0.2);
+  padding: 7px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(119, 255, 0, 0.5);
+  min-width: 100px;
+}
+@media (max-width: 768px)
+{
+  #skills
+  {
+   height: auto;
+   
+  }
+  .skills-category
+  {
+    margin-bottom: 10px;
+    padding: 2px;
+  }
 }

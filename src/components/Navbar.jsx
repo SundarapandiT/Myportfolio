@@ -1,24 +1,14 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <nav className="navbar">
-        <a onClick={() => scrollToSection("home")}>Home</a>
-      <a onClick={() => scrollToSection("about")}>About</a>
-      <a onClick={() => scrollToSection("skills")}>Skills</a>
-      <a onClick={() => scrollToSection("projects")}>Projects</a>
-      <a onClick={() => scrollToSection("resume")}>Resume</a>
-      <a onClick={() => scrollToSection("contact")}>Contact</a>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/skills">Skills</Link>
+      <Link to="/projects">Projects</Link>
+      <Link to="/resume">Resume</Link>
+      <Link to="/contact">Contact</Link>
     </nav>
   );
 };
