@@ -4,15 +4,40 @@ const projects = [
   {
     name: "Basic Banking System",
     image: "./portfolio/bankingsystemUI.png",
-    link: "https://yourbankingsystem.com", // Change this to your project URL
-    description: "Experienced in designing and developing basic banking systems...",
+    link: "", // Change this to your project URL
+    description: "Experienced in designing and  Developed user-friendly banking systems (HTML, CSS, PHP, MySQL, JS and using WAMP server)(tested with dummy data)",
   },
   {
-    name: "Two Wheeler Service Slot Booking App",
-    image: "./portfolio/RRtvs-ui.png",
-    link: "https://yourservicebookingapp.com", // Change this to your project URL
-    description: "RR TVS Services (Coimbatore) Two-wheeler Service slot booking app...",
+    name: "Weather Finder",
+    image: "",
+    link: "", // Change this to your project URL
+    description: "This project is a simple weather application that fetches and displays weather data for a user-specified city using the OpenWeatherMap API.",
   },
+  {
+    name: "Dreamik Customisable label shopping ecommerce",
+    image: "",
+    link: "https://www.dreamik.com", // Change this to your project URL
+    description: "Developed an e-commerce website using React. Contributed to Dreamik.com, a platform for ordering customized labels",
+  },
+  {
+    name: "Two Wheeler Service Slot Booking App Design",
+    image: "",
+    link: "", // Change this to your project URL
+    description: "UI for booking bike service (TVS), and request roadside assistance and optionally emergency button.",
+  },
+  {
+    name: "Music Suggestion web app",
+    image: "",
+    link: "", // Change this to your project URL
+    description: " based on facial emotions Using React, Python Ai-model for emotion detection.(Final Year Project) working on",
+  },
+  {
+    name: "BMI calculator",
+    image: "",
+    link: "", // Change this to your project URL
+    description: "  Built this Android app Using Android Studio, calculating BMI and offering personalized fitness suggestions based on the results.",
+  },
+
 ];
 
 const Projects = () => {
