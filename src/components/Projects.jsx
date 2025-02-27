@@ -2,34 +2,34 @@ import React from "react";
 
 const projects = [
   {
-    name: "Basic Banking System",
-    image: "./portfolio/bankingsystemUI.png",
-    link: "", // Change this to your project URL
-    description: "Experienced in designing and  Developed user-friendly banking systems (HTML, CSS, PHP, MySQL, JS and using WAMP server)(tested with dummy data)",
-  },
-  {
     name: "Weather Finder",
-    image: "",
-    link: "", // Change this to your project URL
+    image: "/image.png",
+    link: "https://weatherfinder-seven.vercel.app/", // Change this to your project URL
     description: "This project is a simple weather application that fetches and displays weather data for a user-specified city using the OpenWeatherMap API.",
   },
   {
     name: "Dreamik Customisable label shopping ecommerce",
-    image: "",
+    image: "/dreamik.png",
     link: "https://www.dreamik.com", // Change this to your project URL
     description: "Developed an e-commerce website using React. Contributed to Dreamik.com, a platform for ordering customized labels",
   },
   {
     name: "Two Wheeler Service Slot Booking App Design",
-    image: "",
+    image: "/slotbookui.png",
     link: "", // Change this to your project URL
     description: "UI for booking bike service (TVS), and request roadside assistance and optionally emergency button.",
   },
   {
     name: "Music Suggestion web app",
-    image: "",
-    link: "", // Change this to your project URL
+    image: "/musicsuggestion.png",
+    link: "https://emosync-green.vercel.app/", // Change this to your project URL
     description: " based on facial emotions Using React, Python Ai-model for emotion detection.(Final Year Project) working on",
+  },
+  {
+    name: "Basic Banking System",
+    image: "./portfolio/bankingsystemUI.png",
+    link: "", // Change this to your project URL
+    description: "Experienced in designing and  Developed user-friendly banking systems (HTML, CSS, PHP, MySQL, JS and using WAMP server)(tested with dummy data)",
   },
   {
     name: "BMI calculator",

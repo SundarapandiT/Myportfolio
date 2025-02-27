@@ -348,6 +348,9 @@ section {
 #projects h2{
   margin: 20px 0;
 }
+#projects h3{
+  color: #28c702;
+}
 
 .projects-grid {
   display: grid;
@@ -371,7 +374,7 @@ section {
 }
 
 .project-image {
-  width: 100%;
+  width: 50%;
   border-radius: 8px;
   transition: opacity 0.3s ease-in-out;
 }
