@@ -7,7 +7,7 @@ const Contact = () => {
       <h2>Let's Connect! 📬</h2>
 
       <div className="contact-info">
-        <p><FaPhoneAlt size={18} color="#007BFF" /> <b>Phone:</b> +91 6369017779</p>
+        {/* <p><FaPhoneAlt size={18} color="#007BFF" /> <b>Phone:</b> +91 6369017779</p> */}
         <p>
           <a href="mailto:sundarapandi1707@gmail.com" target="_blank" rel="noopener noreferrer">
             <FaEnvelope size={18} color="#D44638" /> <b>Email:</b> sundarapandi1707@gmail.com
