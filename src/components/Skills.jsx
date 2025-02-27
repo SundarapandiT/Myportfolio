@@ -1,6 +1,6 @@
 import React from "react";
 import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaJava, FaDatabase, FaCuttlefish, FaReact, FaUsers, FaLightbulb, FaPenNib, FaKeyboard, FaTools, FaClipboardList } from "react-icons/fa";
-
+import { SiTableau } from "react-icons/si";
 const Skills = () => {
   const techSkills = [
     { name: "HTML", icon: <FaHtml5 color="#E34F26" size={40} /> },
@@ -14,11 +14,11 @@ const Skills = () => {
   ];
 
   const softSkills = [
-    { name: "Teamwork", icon: <FaUsers color="#32f514" size={40} /> },
-    { name: "Creativity", icon: <FaLightbulb color="#FFD700" size={40} /> },
     { name: "Design", icon: <FaPenNib color="#FF69B4" size={40} /> },
     { name: "Typewriting", icon: <FaKeyboard color="#00BFFF" size={40} /> },
     { name: "Problem-Solving", icon: <FaTools color="#FFA500" size={40} /> },
+    { name: "Tableau Visualization", icon: <SiTableau color="#E97627" size={40} /> },
+    { name: "Teamwork", icon: <FaUsers color="#32f514" size={40} /> },
     { name: "Time Management", icon: <FaClipboardList color="#FF4500" size={40} /> },
   ];
 
