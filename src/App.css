@@ -383,6 +383,31 @@ section {
 .project-info {
   margin-top: 10px;
 }
+/* Responsive for Tablets */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 600px) {
+  #projects {
+    width: 95%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .project-card {
+    padding: 10px;
+  }
+}
 /* resume section  */
 .resume-buttons {
   display: flex;
