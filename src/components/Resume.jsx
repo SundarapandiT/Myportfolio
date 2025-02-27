@@ -2,7 +2,7 @@ import React from 'react';
 import { FaDownload, FaEye } from 'react-icons/fa';
 
 const Resume = () => {
-  const resumeUrl = `/myresume.pdf`;
+  const resumeUrl = `/myresume2.pdf`;
 
   return (
     <section id="resume">
