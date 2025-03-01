@@ -4,7 +4,9 @@ html {
 }
 
 /* Reset margins */
-body, h2, p {
+body,
+h2,
+p {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -27,15 +29,15 @@ section {
   background: linear-gradient(135deg, #000000, #1a1a1a, #282c34);
   background-size: 400% 400%;
   /* animation: morphBackground 10s infinite alternate; */
-  
+
   /* Rounded Corners */
   border-radius: 30px;
-  
+
   /* Premium Shadow Effect */
   box-shadow: 0px 10px 30px rgba(86, 158, 3, 0.5);
-  
+
   /* Centering */
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -61,10 +63,9 @@ section {
   100% { background-position: 0% 50%; }
 } */
 
-
 /* Navbar */
+/* Navbar Container */
 .navbar {
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
@@ -72,33 +73,101 @@ section {
   padding: 12px 0;
   text-align: center;
   z-index: 1000;
-  
-  /* Flexbox for equal spacing */
+
+  /* Flexbox for spacing */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navbar a {
+/* Navbar Inner Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Logo */
+.logo {
+  color: #32f514;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #32f514;
   font-size: 1.2em;
   font-weight: bold;
   padding: 12px 20px;
-  margin: 0 15px; /* Ensures equal spacing */
   cursor: pointer;
   transition: color 0.3s ease-in-out;
-  
-  /* Premium Button-Like Hover */
   border-radius: 8px;
-  transition: all 0.3s ease-in-out;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   color: #77ff00;
   background-color: rgba(50, 245, 20, 0.2);
   box-shadow: 0 4px 10px rgba(119, 255, 0, 0.5);
 }
+
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #32f514;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-linksopen {
+    display: block;
+  }
+  .nav-linksopen li {
+    margin: 10px 30px;
+    list-style: none;
+  }
+  .nav-linksopen a {
+    color: #32f514;
+    text-decoration: none;
+  }
+}
+
 #home {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -194,6 +263,7 @@ section {
     justify-items: center;
     width: 100%;
     height: auto;
+    overflow: hidden;
   }
 
   #home .content {
@@ -230,7 +300,7 @@ section {
 
 #about {
   padding: 20px 5%; /* Use percentage for better responsiveness */
-  color: white; 
+  color: white;
   font-size: large;
   font-weight: 600;
   max-width: 1100px; /* Limit width for better readability */
@@ -238,7 +308,8 @@ section {
   height: auto;
 }
 
-#about h2, #about strong {
+#about h2,
+#about strong {
   font-weight: bold;
   color: #32f514; /* Green color */
 }
@@ -307,7 +378,6 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  
 }
 
 .skill-item {
@@ -323,15 +393,11 @@ section {
   box-shadow: 0 4px 10px rgba(119, 255, 0, 0.5);
   min-width: 100px;
 }
-@media (max-width: 768px)
-{
-  #skills
-  {
-   height: auto;
-   
+@media (max-width: 768px) {
+  #skills {
+    height: auto;
   }
-  .skills-category
-  {
+  .skills-category {
     margin-bottom: 10px;
     padding: 2px;
   }
@@ -345,10 +411,10 @@ section {
   height: auto;
 }
 
-#projects h2{
+#projects h2 {
   margin: 20px 0;
 }
-#projects h3{
+#projects h3 {
   color: #28c702;
 }
 
@@ -452,8 +518,7 @@ section {
   transform: scale(1.05);
 }
 /* contact  */
-#contact
-{
+#contact {
   font-weight: 600;
 }
 .contact-intro {
@@ -506,6 +571,5 @@ section {
 
 .linkedin:hover {
   box-shadow: 0 0 20px rgba(0, 119, 181, 0.8); /* LinkedIn Blue */
-  color:white;
+  color: white;
 }
-
