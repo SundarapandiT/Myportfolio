@@ -34,12 +34,12 @@ const projects = [
     description:
       "Experienced in designing and  Developed user-friendly banking systems (HTML, CSS, PHP, MySQL, JS and using WAMP server)(tested with dummy data)",
   },
-  {
+   {
     name: "BMI calculator",
-    image: "",
-    link: "", // Change this to your project URL
+    image: "bmiui.jpg",
+    link: "/BMI Calculator.pdf", // Change this to your project URL
     description:
-      "  Built this Android app Using Android Studio, calculating BMI and offering personalized fitness suggestions based on the results.",
+      "Built this Android app Using Android Studio, calculating BMI and offering personalized fitness suggestions based on the results. (College assessment project)",
   },
 ];
 
