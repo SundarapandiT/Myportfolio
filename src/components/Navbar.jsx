@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // Importing icons
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
@@ -14,43 +14,21 @@ const Navbar = () => {
         </Link>
 
         {/* Menu Icon for Mobile */}
-        <button className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={30} /> : <Menu size={30} />}
-        </button>
-
-        {/* Navbar Links */}
-        <ul className={`nav-links${isOpen ? "open" : ""}`}>
-          <li>
-            <Link to="/" onClick={() => setIsOpen(false)}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={() => setIsOpen(false)}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/skills" onClick={() => setIsOpen(false)}>
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects" onClick={() => setIsOpen(false)}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to="/resume" onClick={() => setIsOpen(false)}>
-              Resume
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={() => setIsOpen(false)}>
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            <div className={menuOpen ? "bar open" : "bar"}></div>
+            <div className={menuOpen ? "bar open" : "bar"}></div>
+            <div className={menuOpen ? "bar open" : "bar"}></div>
+          </div>
+          <nav className={`nav ${menuOpen ? "active" : ""}`}>
+            <ul className="nav-list">
+              <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+              <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+              <li><Link to="/skills" onClick={() => setMenuOpen(false)}>Skills</Link></li>
+              <li><Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link></li>
+              <li><Link to="/resume" onClick={() => setMenuOpen(false)}>Resume</Link></li>
+              <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+            </ul>
+          </nav>
       </div>
     </nav>
   );
